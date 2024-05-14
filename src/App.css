@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body { min-height: 100vh; width: 100%; overflow: hidden; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#app {
+  background-color: #F2F3F7;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.header__contaienr {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+.header__section {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.header__nav-item-text {
+  margin-left: 8px;
+  color: #666666;
+  font-weight: 600;
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding: 12px;
+  min-width: 100%;
+  width: 100vw;
+  margin-bottom: 4px;
+  z-index: 11;
+}
+
+.seperator {
+  background-color: #464646;
+  width: 1px;
+  height: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.icon-button-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background-color: #ECECEC;
+}
+
+.button-container {
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-weight: 600;
+  color: #5DA571;
+  border: 2px solid #5DA571;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-solid {
+  background-color: #5DA571;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.social-button-container {
+  display: flex;
+  align-items: center;
+  background-color: #F2F3F7;
+  padding: 12px 16px;
+  margin-right: 20px;
+  border-radius: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-button-container-active {
+  border: 1px solid #B1369A;
+}
+
+.social-button-text {
+  margin-left: 8px;
+}
+
+.social-button-new {
+  margin-left: 4px;
+  background-color: #FF8FAA;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.sidebar-container {
+  height: 100%;
+  width: 25%;
+}
+
+.status-container {
+  background-color: white;
+  margin-bottom: 4px;
+  padding: 20px;
+}
+
+.status-title {
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.status-content {
+  color: #666666;
+  font-size: 12px;
+  padding-right: 40px;
+}
+
+.required-container {
+  background-color: white;
+  padding: 20px;
+  padding-right: 0;
+  height: 100%;
+}
+
+.required-title {
+  color: #888888;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.required-item {
+  display: flex;
+  border-right: 3px solid #23A455;
+  padding: 12px 0;
+  background: linear-gradient(270deg, #EBFFEF -1.6%, #FEFEFE 100.89%);
+}
+
+.required-info {
+  margin-left: 8px;
+}
+
+.required-info-title {
+  color: #333333;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.required-info-content {
+  color: #666666;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page-content-container {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.top-section {
+  position: absolute;
+  right: 0;
+  top: -2.4rem;
+  z-index: 10;
+}
+
+.bottom-section {
+  position: absolute;
+  left: 0;
+  bottom: -2.4rem;
+  z-index: 10;
+}
+
+.start-form-container {
+  width: 40%;
+  background-color: white;
+  box-shadow: 0px 4px 6px 0px #1B1D1C1A;
+  padding: 40px;
+  border: 1px solid var(--greyscale-surface-subtle, #F6F7F6);
+  border-radius: 6px;
+}
+
+.start-form-header {
+  border-bottom: 1px solid var(--greyscale-surface-subtle, #F6F7F6);
+  padding-bottom: 32px;
+}
+
+.start-form-header-ig {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ig-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.start-form-header-title {
+  color: #1B1D1C;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.start-form-header-content {
+  color: #505451;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.start-form-content {
+  padding-top: 32px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.content-info {
+  margin-left: 12px;
+}
+
+.content-title {
+  color: #2BC666;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.content-content {
+  color: #353735;
 }
